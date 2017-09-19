@@ -74,7 +74,7 @@ namespace TableWatcher
             using (SqlConnection connection = new SqlConnection(ConnectionString))
             {
                 await Task.Run(() => connection.OpenAsync());
-                string sql = $"INSERT INTO NOTA(codigo, texto) values ({handle}, 'teste {handle}')";
+                string sql = $"INSERT INTO NOTA(codigo, texto) values ({handle}, 'Texto - {handle}')";
                 SqlCommand insertCommand = new SqlCommand(sql, connection);
                 await Task.Run(() => insertCommand.ExecuteNonQueryAsync());
             }

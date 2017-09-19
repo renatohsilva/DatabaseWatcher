@@ -74,7 +74,7 @@ namespace TableWatcher
             using (OracleConnection connection = new OracleConnection(ConnectionString))
             {
                 await Task.Run(() => connection.OpenAsync());
-                string sql = $"INSERT INTO NOTA(codigo, texto) values ({handle}, 'teste {handle}')";
+                string sql = $"INSERT INTO NOTA(codigo, texto) values ({handle}, 'Texto - {handle}')";
                 OracleCommand insertCommand = new OracleCommand(sql, connection);
                 await Task.Run(() => insertCommand.ExecuteNonQueryAsync());
             }
