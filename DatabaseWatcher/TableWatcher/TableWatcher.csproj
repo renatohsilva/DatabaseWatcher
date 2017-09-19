@@ -42,13 +42,13 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
     <Reference Include="TableDependency">
-      <HintPath>..\..\Dependencia\TableDependency.dll</HintPath>
+      <HintPath>..\..\Dependencias\TableDependency.dll</HintPath>
     </Reference>
     <Reference Include="TableDependency.OracleClient">
-      <HintPath>..\..\Dependencia\TableDependency.OracleClient.dll</HintPath>
+      <HintPath>..\..\Dependencias\TableDependency.OracleClient.dll</HintPath>
     </Reference>
     <Reference Include="TableDependency.SqlClient">
-      <HintPath>..\..\Dependencia\TableDependency.SqlClient.dll</HintPath>
+      <HintPath>..\..\Dependencias\TableDependency.SqlClient.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
