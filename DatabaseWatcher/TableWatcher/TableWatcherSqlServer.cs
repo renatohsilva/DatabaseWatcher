@@ -25,7 +25,7 @@ namespace TableWatcher
 
         public void InitializeTableWatcher()
         {
-            _dependency = new SqlTableDependency<T>(ConnectionString, nomeEntidadeSqlServer, mapper, listaUpdate, DmlTriggerType.All, true, nomeEntidadeSqlServer + "ESOCIAL");
+            _dependency = new SqlTableDependency<T>(ConnectionString, nomeEntidadeSqlServer, mapper, listaUpdate, DmlTriggerType.All, true, nomeEntidadeSqlServer + "TYPE");
             _dependency.OnChanged += OnChanged;
             _dependency.OnError += OnError;
         }
