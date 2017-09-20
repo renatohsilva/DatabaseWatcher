@@ -9,6 +9,7 @@ using TableDependency.OracleClient;
 using TableDependency.SqlClient;
 using TableWatcher.Base;
 using Oracle.ManagedDataAccess.Client;
+using TableWatcher.Interface;
 
 namespace TableWatcher
 {

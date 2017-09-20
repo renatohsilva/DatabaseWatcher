@@ -12,37 +12,12 @@ namespace DatabaseWatcher
     {
         static void Main(string[] args)
         {
-            WatcherOracle();
-            //WatcherSqlServer();
+            Watcher();
         }
 
-        private static void WatcherSqlServer()
+        private static void Watcher()
         {
-            var ConnectionStringSqlServer = @"";
-            var TableWatcher = new TableWatcherStrategy<Pessoa>(new TableWatcherSqlServer<Pessoa>(ConnectionStringSqlServer));
-            try
-            {
-                TableWatcher.InitializeTableWatcher();
-                TableWatcher.StartTableWatcher();
-                Console.WriteLine("Esperando para receber notificações...");
-                Console.WriteLine("Precione qualquer tecla para sair");
-                Console.ReadKey();
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message, ex.InnerException);
-            }
-            finally
-            {
-                TableWatcher.StopTableWatcher();
-            }
-        }
-
-        private static void WatcherOracle()
-        {
-            var ConnectionStringOracle = @"";
-            var TableWatcher = new TableWatcherStrategy<Pessoa>(new TableWatcherOracle<Pessoa>(ConnectionStringOracle));
-
+            var TableWatcher = new TableWatcherStrategy<Pessoa>();
             try
             {
                 TableWatcher.InitializeTableWatcher();

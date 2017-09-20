@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TableWatcher.Adapter;
 using TableWatcher.Base;
+using TableWatcher.Interface;
 
 namespace TableWatcher
 {
@@ -11,9 +13,9 @@ namespace TableWatcher
     {
         private ITableWatcher<T> TableWatcherAbstract;
 
-        public TableWatcherStrategy(ITableWatcher<T> tableWatcherAbstract)
+        public TableWatcherStrategy()
         {
-            TableWatcherAbstract = tableWatcherAbstract;
+            TableWatcherAbstract = new AdapterFactory<T>().GetAdapter();
         }
 
         public void InitializeTableWatcher()

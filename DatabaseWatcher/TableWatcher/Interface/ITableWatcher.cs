@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TableWatcher.Base
+namespace TableWatcher.Interface
 {
     public interface ITableWatcher<T> where T : class
     {

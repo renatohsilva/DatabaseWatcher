@@ -34,6 +34,7 @@
       <HintPath>..\packages\Oracle.ManagedDataAccess.12.2.1100\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -52,8 +53,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Adapter\AdapterFactory.cs" />
     <Compile Include="AtributoBanco.cs" />
-    <Compile Include="Base\ITableWatcher.cs" />
+    <Compile Include="Interface\ITableWatcher.cs" />
     <Compile Include="Base\TableWatcherBase.cs" />
     <Compile Include="Classes\Nota.cs" />
     <Compile Include="Classes\NotaItem.cs" />
@@ -67,5 +69,6 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

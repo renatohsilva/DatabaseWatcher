@@ -9,6 +9,7 @@ using TableDependency;
 using TableDependency.Enums;
 using TableDependency.SqlClient;
 using TableWatcher.Base;
+using TableWatcher.Interface;
 
 namespace TableWatcher
 {
