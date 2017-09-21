@@ -10,7 +10,6 @@ namespace TableWatcher.Classes
 {
     public class Nota
     {
-        [AtributoBanco("Handle")]
         public string ID { get; set; }
 
         [AtributoBanco("NumeroNota")]

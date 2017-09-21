@@ -9,7 +9,6 @@ namespace TableWatcher.Classes
 {
     public class Pessoa
     {
-        [AtributoBanco("ID")]
         public int Handle { get; set; }
 
         [AtributoBanco("Nome")]

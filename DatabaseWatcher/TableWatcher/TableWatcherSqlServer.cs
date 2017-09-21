@@ -50,36 +50,20 @@ namespace TableWatcher
         {
             if (e.ChangeType != ChangeType.None)
             {
-                PropertyInfo propInfo = e.Entity.GetType().GetProperty("Handle");
-                object itemValue = propInfo.GetValue(e.Entity, null);
-
-                switch (e.ChangeType)
-                {
-                    case ChangeType.Delete:
-                        Console.WriteLine($"Deletou Id:{ itemValue }");
-                        break;
-                    case ChangeType.Insert:
-                        Console.WriteLine($"Inseriu Id:{ itemValue }");
-                        break;
-                    case ChangeType.Update:
-                        Console.WriteLine($"Atualizou Id:{ itemValue }");
-                        break;
-                }
-
-                Task.Run(() => InserirOnChange(itemValue));
+                Task.Run(() => InserirOnChange(e));
             }
         }
 
-        public async Task InserirOnChange(object handle)
+        public async Task InserirOnChange(TableDependency.EventArgs.RecordChangedEventArgs<T> e)
         {
             using (SqlConnection connection = new SqlConnection(ConnectionString))
             {
                 await Task.Run(() => connection.OpenAsync());
-                string sql = $"INSERT INTO NOTA(codigo, texto) values ({handle}, 'Texto - {handle}')";
-                SqlCommand insertCommand = new SqlCommand(sql, connection);
+                SqlCommand insertCommand = MontaInsertCommand(connection, e);
                 await Task.Run(() => insertCommand.ExecuteNonQueryAsync());
             }
         }
 
+        
     }
 }
