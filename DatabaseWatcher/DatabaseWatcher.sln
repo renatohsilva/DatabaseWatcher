@@ -5,13 +5,15 @@ VisualStudioVersion = 15.0.26430.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TableWatcher", "TableWatcher\TableWatcher.csproj", "{351F966B-2426-495F-AFD5-A93CF7FCDEC4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseWatcher", "DatabaseWatcher\DatabaseWatcher.csproj", "{0F17BB75-E13B-4BB0-8933-7D0D060B9A41}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TableDependency", "..\TableDependency\TableDependency\TableDependency.csproj", "{0A46A45A-BE9B-455F-A6D1-183C07FEF4BC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TableDependency.OracleClient", "..\TableDependency\TableDependency.OracleClient\TableDependency.OracleClient.csproj", "{41F1E2B4-5F77-4F40-A511-2F90C8DFDB12}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TableDependency.SqlClient", "..\TableDependency\TableDependency.SqlClient\TableDependency.SqlClient.csproj", "{3B201820-CB8F-41A1-8430-0C806BCF7494}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DbWatcherService", "DatabaseWatcherService\DbWatcherService.csproj", "{679D5AC3-6BF2-4D54-9A5B-5A510034F624}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseWatcher", "DatabaseWatcher\DatabaseWatcher.csproj", "{0F17BB75-E13B-4BB0-8933-7D0D060B9A41}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +25,6 @@ Global
 		{351F966B-2426-495F-AFD5-A93CF7FCDEC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{351F966B-2426-495F-AFD5-A93CF7FCDEC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{351F966B-2426-495F-AFD5-A93CF7FCDEC4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0F17BB75-E13B-4BB0-8933-7D0D060B9A41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0F17BB75-E13B-4BB0-8933-7D0D060B9A41}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0F17BB75-E13B-4BB0-8933-7D0D060B9A41}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0F17BB75-E13B-4BB0-8933-7D0D060B9A41}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0A46A45A-BE9B-455F-A6D1-183C07FEF4BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0A46A45A-BE9B-455F-A6D1-183C07FEF4BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0A46A45A-BE9B-455F-A6D1-183C07FEF4BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -39,6 +37,14 @@ Global
 		{3B201820-CB8F-41A1-8430-0C806BCF7494}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3B201820-CB8F-41A1-8430-0C806BCF7494}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3B201820-CB8F-41A1-8430-0C806BCF7494}.Release|Any CPU.Build.0 = Release|Any CPU
+		{679D5AC3-6BF2-4D54-9A5B-5A510034F624}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{679D5AC3-6BF2-4D54-9A5B-5A510034F624}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{679D5AC3-6BF2-4D54-9A5B-5A510034F624}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{679D5AC3-6BF2-4D54-9A5B-5A510034F624}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F17BB75-E13B-4BB0-8933-7D0D060B9A41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F17BB75-E13B-4BB0-8933-7D0D060B9A41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F17BB75-E13B-4BB0-8933-7D0D060B9A41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F17BB75-E13B-4BB0-8933-7D0D060B9A41}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
